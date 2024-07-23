@@ -6,8 +6,8 @@ from langchain_huggingface import HuggingFaceEndpoint, HuggingFaceEndpointEmbedd
 
 class ChatBot:
     def __init__(self, text: str):
-        llm_model_name="mistralai/Mistral-7B-Instruct-v0.2"
-        self.llm=HuggingFaceEndpoint(repo_id=llm_model_name,max_length=128,temperature=0.7)        
+        llm_model_name = "mistralai/Mistral-7B-Instruct-v0.2"
+        self.llm = HuggingFaceEndpoint(repo_id=llm_model_name,max_length=128,temperature=0.7)        
         # Embedding model
         embedding_model_name = "mixedbread-ai/mxbai-embed-large-v1"
         self.embeddings = HuggingFaceEndpointEmbeddings(model= embedding_model_name,task="feature-extraction")
